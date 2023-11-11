@@ -13,7 +13,7 @@
   "scripts": {
     "build": "tsc",
     "prepublishOnly": "npm run build",
-    "release": "np",
+    "release": "cp ../../README.md ../../LICENSE ./ && np",
     "test": "vitest",
     "coverage": "vitest run --coverage"
   },
