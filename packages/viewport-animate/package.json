@@ -20,6 +20,7 @@
   "devDependencies": {
     "@testing-library/jest-dom": "^6.1.4",
     "@vitest/coverage-v8": "^0.34.6",
+    "jsdom": "^22.1.0",
     "np": "*",
     "typescript": "^5.2.2",
     "vitest": "^0.34.6"

@@ -153,13 +153,7 @@ export class ViewportAnimate {
   }
 }
 
-enum AnimationPlayKind {
-  ONCE = "@",
-  REPLAY = "*",
-  INFINITE = "!",
-}
-
-type ViewportAnimateOptions = {
+export type ViewportAnimateOptions = {
   /** The attribute to look for on elements to animate */
   attribute: string;
 
@@ -169,6 +163,12 @@ type ViewportAnimateOptions = {
   /** The default animation properties to use if not specified on the element */
   defaultAnimationProperties: DefaultAnimationProperties;
 };
+
+export enum AnimationPlayKind {
+  ONCE = "@",
+  REPLAY = "*",
+  INFINITE = "!",
+}
 
 type AnimationData = {
   animationPlayKind: AnimationPlayKind;
