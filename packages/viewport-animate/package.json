@@ -1,6 +1,6 @@
 {
   "name": "viewport-animate",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Easy and performant API for applying CSS animations when elements are scrolled into the viewport.",
   "type": "module",
   "exports": {
