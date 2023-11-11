@@ -1,0 +1,51 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/rush/v5/rush.schema.json",
+  "rushVersion": "5.109.2",
+  "pnpmVersion": "8.10.0",
+  "nodeSupportedVersionRange": ">=14.15.0 <15.0.0 || >=16.13.0 <17.0.0 || >=18.15.0 <19.0.0 || >=20.3.0 <21.0.0",
+  "gitPolicy": {},
+  "repository": {
+    "url": "https://github.com/dystopiandev/viewport-animate.git",
+    "defaultBranch": "main",
+    "defaultRemote": "origin"
+  },
+  "eventHooks": {
+    /**
+     * A list of shell commands to run before "rush install" or "rush update" starts installation
+     */
+    "preRushInstall": [
+      // "common/scripts/pre-rush-install.js"
+    ],
+    /**
+     * A list of shell commands to run after "rush install" or "rush update" finishes installation
+     */
+    "postRushInstall": [],
+    /**
+     * A list of shell commands to run before "rush build" or "rush rebuild" starts building
+     */
+    "preRushBuild": [],
+    /**
+     * A list of shell commands to run after "rush build" or "rush rebuild" finishes building
+     */
+    "postRushBuild": [],
+    /**
+     * A list of shell commands to run before the "rushx" command starts
+     */
+    "preRushx": [],
+    /**
+     * A list of shell commands to run after the "rushx" command finishes
+     */
+    "postRushx": []
+  },
+  "variants": [],
+  "projects": [
+    {
+      "packageName": "viewport-animate",
+      "projectFolder": "packages/viewport-animate"
+    },
+    {
+      "packageName": "viewport-animate-example.astro",
+      "projectFolder": "packages/viewport-animate-example.astro"
+    }
+  ]
+}

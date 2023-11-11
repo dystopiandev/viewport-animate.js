@@ -89,10 +89,7 @@ export class ViewportAnimate {
     }
   }
 
-
-
-  private animate (entry: IntersectionObserverEntry,
-    animationData: AnimationData) {
+  private animate (entry: IntersectionObserverEntry, animationData: AnimationData) {
     const element = entry.target as HTMLElement;
 
     element.style.animation = animationData.animation.toString();
@@ -101,7 +98,6 @@ export class ViewportAnimate {
       element.style.animationIterationCount = "infinite";
     }
   }
-
 
   private resolveAnimationData (
     animationExpression: string
@@ -170,6 +166,7 @@ type ViewportAnimateOptions = {
   /** The threshold for the IntersectionObserver */
   observerThreshold: number | number[];
 
+  /** The default animation properties to use if not specified on the element */
   defaultAnimationProperties: DefaultAnimationProperties;
 };
 

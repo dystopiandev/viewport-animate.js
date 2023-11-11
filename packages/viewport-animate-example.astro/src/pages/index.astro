@@ -1,0 +1,129 @@
+---
+import "animate.css/animate.css";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+    <style>
+      [data-va] {
+        opacity: 0;
+      }
+
+      body {
+        width: 100%;
+        background-color: #333;
+      }
+
+      .separator {
+        width: 100%;
+        height: 25vh;
+      }
+
+      div {
+        font-size: 2rem;
+        font-weight: bolder;
+        text-align: center;
+      }
+
+      .circle {
+        width: 50%;
+        height: 50%;
+        padding: 50px;
+        border-radius: 50%;
+        background-color: #fff;
+        color: #000;
+        margin: 0 auto;
+        margin-top: 50px;
+        margin-bottom: 50px;
+      }
+
+      .square {
+        width: 50%;
+        height: 50%;
+        padding: 50px;
+        background-color: #fff;
+        margin: 0 auto;
+        margin-top: 50px;
+        margin-bottom: 50px;
+      }
+
+      .fragment {
+        color: rgb(0, 144, 106);
+        font-weight: bolder;
+      }
+    </style>
+    <script>
+      import { ViewportAnimate } from "viewport-animate";
+
+      window.addEventListener("load", () => {
+        new ViewportAnimate({
+          attribute: "data-va",
+          observerThreshold: 0.01,
+        }).init();
+      });
+    </script>
+  </head>
+  <body>
+    <div class="separator"></div>
+    <div class="circle" data-va="slideInDown +1.65s">
+      <p class="fragment">data-va="slideInDown +1.65s"</p>
+      <p>...</p>
+      <p>Animation name: <span>slideInDown</span></p>
+      <p>Duration: <span>1.65s</span> (default)</p>
+      <p>Delay: <span>0s</span> (default)</p>
+      <p>Iteration count: <span>1</span> (default)</p>
+      <p>Repeat: <span>false</span> (default)</p>
+      <p>...</p>
+      <p>(scroll down to see more)</p>
+    </div>
+    <div class="separator"></div>
+    <div class="square" data-va="! jello +1s">
+      <p class="fragment">data-va="! jello +1s"</p>
+      <p>...</p>
+      <p>Animation name: <span>jello</span></p>
+      <p>Duration: <span>1s</span></p>
+      <p>Delay: <span>0s</span> (default)</p>
+      <p>Iteration count: <span>infinite</span></p>
+      <p>Repeat: <span>N/A</span></p>
+      <p>...</p>
+      <p>(scroll down to see more)</p>
+    </div>
+    <div class="separator"></div>
+    <div class="square" data-va="*0.01 fadeInLeft 1x">
+      <p class="fragment">data-va="*0.01 fadeInLeft 1x"</p>
+      <p>...</p>
+      <p>Animation name: <span>fadeInLeft</span></p>
+      <p>Duration: <span>1s</span> (default)</p>
+      <p>Delay: <span>0s</span> (default)</p>
+      <p>Iteration count: <span>1</span></p>
+      <p>Repeat: <span>true</span></p>
+      <p>...</p>
+      <p>(scroll down to see more)</p>
+    </div>
+    <div class="separator"></div>
+    <div class="square" data-va="@0.1 rotateIn +2500ms 0.7x">
+      <p class="fragment">data-va="@0.1 rotateIn +2500ms 0.7x"</p>
+      <p>...</p>
+      <p>Animation name: <span>rotateIn</span></p>
+      <p>Duration: <span>2.5s</span></p>
+      <p>Delay: <span>0s</span> (default)</p>
+      <p>Iteration count: <span>0.7</span></p>
+      <p>Repeat: <span>false</span></p>
+    </div>
+    <div class="separator"></div>
+    <div class="circle" data-va="*0.1 fadeIn +5s -0.7s 0.235x">
+      <p class="fragment">data-va="*0.1 fadeIn +5s -0.7s 0.235x"</p>
+      <p>...</p>
+      <p>Animation name: <span>fadeIn</span></p>
+      <p>Duration: <span>5s</span></p>
+      <p>Delay: <span>0.7s</span></p>
+      <p>Iteration count: <span>0.235</span></p>
+      <p>Repeat: <span>true</span></p>
+    </div>
+  </body>
+</html>
