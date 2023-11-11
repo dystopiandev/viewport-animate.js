@@ -81,4 +81,5 @@ Example:
 
 ## Demo
 
-Follow the README in the [example Astro project](./packages/viewport-animate-example.astro/).
+- [Live Demo](https://dystopian.dev/)
+- [Astro project](./packages/viewport-animate-example.astro/).
