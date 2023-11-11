@@ -1,6 +1,6 @@
 {
   "name": "viewport-animate",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Easy and performant API for applying CSS animations when elements are scrolled into the viewport.",
   "type": "module",
   "exports": {
@@ -14,7 +14,8 @@
     "build": "tsc",
     "prepublishOnly": "npm run build",
     "release": "cp ../../README.md ../../LICENSE ./ && np",
-    "test": "vitest",
+    "test:dev": "vitest",
+    "test": "vitest run",
     "coverage": "vitest run --coverage"
   },
   "devDependencies": {
