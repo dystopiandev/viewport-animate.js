@@ -5,7 +5,6 @@
 
 [![npm version](https://img.shields.io/npm/v/viewport-animate.svg?style=flat-square)](https://www.npmjs.org/package/viewport-animate)
 [![install size](https://img.shields.io/badge/dynamic/json?url=https://packagephobia.com/v2/api.json?p=viewport-animate&query=$.install.pretty&label=install%20size&style=flat-square)](https://packagephobia.now.sh/result?p=viewport-animate)
-[![npm bundle size](https://img.shields.io/bundlephobia/minzip/viewport-animate?style=flat-square)](https://bundlephobia.com/package/viewport-animate@latest)
 [![npm downloads](https://img.shields.io/npm/dm/viewport-animate.svg?style=flat-square)](https://npm-stat.com/charts.html?package=viewport-animate)
 [![Known Vulnerabilities](https://snyk.io/test/npm/viewport-animate/badge.svg)](https://snyk.io/test/npm/viewport-animate)
 
