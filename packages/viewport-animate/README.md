@@ -87,6 +87,9 @@ Import the CSS file in your project:
 import "animate.css/animate.css";
 ```
 
+<details title="click to expand">
+<summary>Optional step (click to expand)</summary>
+
 One last thing, to make sure the animations are not visible before they are played, add the following CSS:
 
 ```css
@@ -95,6 +98,17 @@ One last thing, to make sure the animations are not visible before they are play
   opacity: 0;
 }
 ```
+
+If you do set the opacity to `0`. You may want to wrap the following CSS in `<noscript>` to make sure the elements are visible when JavaScript is disabled:
+
+```css
+[data-va] /* or whatever selector you use */
+{
+  opacity: 1 !important;
+}
+```
+
+</details>
 
 **2. Initialize the module**
 
