@@ -4,7 +4,10 @@ import {
   DefaultAnimationProperties,
 } from "../src/index.js";
 
-const defaultProps: DefaultAnimationProperties = new AnimationProperties({}, {});
+const defaultProps: DefaultAnimationProperties = new AnimationProperties(
+  {},
+  {}
+);
 
 describe("AnimationProperties", () => {
   it("should be a class", () => {
