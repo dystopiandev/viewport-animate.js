@@ -49,7 +49,7 @@ class l {
     return `${this.name} ${this.duration} ${this.timingFunction} ${this.delay} ${this.iterationCount} ${this.direction} ${this.fillMode} ${this.playState} ${this.timeline}`;
   }
 }
-class u {
+class m {
   options = {
     attribute: "data-va",
     observerThreshold: 0.01,
@@ -129,9 +129,10 @@ class u {
     }
   }
 }
-var m = /* @__PURE__ */ ((a) => (a.ONCE = "@", a.REPLAY = "*", a.INFINITE = "!", a))(m || {});
+var u = /* @__PURE__ */ ((a) => (a.ONCE = "@", a.REPLAY = "*", a.INFINITE = "!", a))(u || {});
+window && (window.ViewportAnimate = m);
 export {
-  m as AnimationPlayKind,
+  u as AnimationPlayKind,
   l as AnimationProperties,
-  u as ViewportAnimate
+  m as ViewportAnimate
 };
