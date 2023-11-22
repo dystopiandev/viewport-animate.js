@@ -12,38 +12,32 @@ class l {
     this.name = t.name || "", this.duration = t.duration || i.duration || "1s", this.timingFunction = t.timingFunction || i.timingFunction || "ease", this.delay = t.delay || i.delay || "0s", this.iterationCount = t.iterationCount || i.iterationCount || 1, this.direction = t.direction || i.direction || "normal", this.fillMode = t.fillMode || i.fillMode || "both", this.playState = t.playState || i.playState || "running", this.timeline = t.timeline || "";
   }
   static fromAnimationExpression(i, t) {
-    const n = t.trim().replace(/\s+/g, " ").split(" "), o = {
+    const n = t.trim().replace(/\s+/g, " ").split(" "), s = {
       name: n[0]
     };
-    for (let s = 1; s < n.length; s++)
-      if (n[s].startsWith("+")) {
-        o.duration = n[s].substring(1);
+    for (let o = 1; o < n.length; o++)
+      if (n[o].startsWith("+")) {
+        s.duration = n[o].substring(1);
         continue;
-      } else if (n[s].startsWith("-")) {
-        o.delay = n[s].substring(1);
+      } else if (n[o].startsWith("-")) {
+        s.delay = n[o].substring(1);
         continue;
-      } else if (n[s].endsWith("x")) {
-        o.iterationCount || (o.iterationCount = parseFloat(n[s].slice(0, -1)));
+      } else if (n[o].endsWith("x")) {
+        s.iterationCount || (s.iterationCount = parseFloat(n[o].slice(0, -1)));
         continue;
       } else
-        return new l(
-          i,
-          {
-            name: n[0],
-            duration: n[1],
-            timingFunction: n[2],
-            delay: n[3],
-            iterationCount: n[4],
-            direction: n[5],
-            fillMode: n[6],
-            playState: n[7],
-            timeline: n[8]
-          }
-        );
-    return new l(
-      i,
-      o
-    );
+        return new l(i, {
+          name: n[0],
+          duration: n[1],
+          timingFunction: n[2],
+          delay: n[3],
+          iterationCount: n[4],
+          direction: n[5],
+          fillMode: n[6],
+          playState: n[7],
+          timeline: n[8]
+        });
+    return new l(i, s);
   }
   toString() {
     return `${this.name} ${this.duration} ${this.timingFunction} ${this.delay} ${this.iterationCount} ${this.direction} ${this.fillMode} ${this.playState} ${this.timeline}`;
@@ -68,24 +62,24 @@ class m {
     for (let t = 0; t < i.length; t++) {
       const e = i[t];
       e.style.opacity = "0";
-      const n = e.getAttribute(this.options.attribute).trim(), o = this.resolveAnimationData(n);
-      o && (o.animationPlayKind === "*" && new IntersectionObserver(
-        async (s) => {
-          for (let r = 0; r < s.length; r++)
-            s[r].isIntersecting || (e.style.opacity = "0", e.style.animation = "none");
+      const n = e.getAttribute(this.options.attribute).trim(), s = this.resolveAnimationData(n);
+      s && (s.animationPlayKind === "*" && new IntersectionObserver(
+        async (o) => {
+          for (let r = 0; r < o.length; r++)
+            o[r].isIntersecting || (e.style.opacity = "0", e.style.animation = "none");
         },
         {
           threshold: 1e-3
         }
       ).observe(e), new IntersectionObserver(
-        (s, r) => {
-          for (let c = 0; c < s.length; c++) {
-            const h = s[c];
-            h.isIntersecting && (e.style.opacity = "1", this.animate(h, o), o.animationPlayKind === "@" && r.disconnect());
+        (o, r) => {
+          for (let c = 0; c < o.length; c++) {
+            const h = o[c];
+            h.isIntersecting && (e.style.opacity = "1", this.animate(h, s), s.animationPlayKind === "@" && r.disconnect());
           }
         },
         {
-          threshold: o.thresholds
+          threshold: s.thresholds
         }
       ).observe(e));
     }
@@ -100,7 +94,7 @@ class m {
       return null;
     const e = this.parseAnimationPlayKind(
       t[0]
-    ), n = e ? t.substring(t.indexOf(" ") + 1) : t, o = e ? this.parseObserverThresholds(
+    ), n = e ? t.substring(t.indexOf(" ") + 1) : t, s = e ? this.parseObserverThresholds(
       t.substring(1).split(" ")[0]
     ) : this.options.observerThreshold;
     return {
@@ -109,7 +103,7 @@ class m {
         this.options.defaultAnimationProperties,
         n
       ),
-      thresholds: o
+      thresholds: s
     };
   }
   parseObserverThresholds(i) {
@@ -130,7 +124,7 @@ class m {
   }
 }
 var u = /* @__PURE__ */ ((a) => (a.ONCE = "@", a.REPLAY = "*", a.INFINITE = "!", a))(u || {});
-window && (window.ViewportAnimate = m);
+typeof window < "u" && (window.ViewportAnimate = m);
 export {
   u as AnimationPlayKind,
   l as AnimationProperties,
