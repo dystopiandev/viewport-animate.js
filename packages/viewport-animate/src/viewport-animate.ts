@@ -1,7 +1,7 @@
 import {
   AnimationProperties,
   type DefaultAnimationProperties,
-} from "./animation-properties.js";
+} from "./animation-properties";
 
 /**
  * @class ViewportAnimate - Animate elements on scroll

@@ -1,2 +1,2 @@
-export * from "./animation-properties.js";
-export * from "./viewport-animate.js";
+export * from "./animation-properties";
+export * from "./viewport-animate";

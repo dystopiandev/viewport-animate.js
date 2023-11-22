@@ -1,16 +1,19 @@
----
-import "animate.css/animate.css";
-import "../../../viewport-animate-example.html/styles.css"
----
-
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} /><link
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Viewport Animate example</title>
+    <link
       href="https://cdn.jsdelivr.net/npm/reset-css/reset.min.css"
       rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+      integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,17 +21,8 @@ import "../../../viewport-animate-example.html/styles.css"
       href="https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:wght@300&display=swap"
       rel="stylesheet"
     />
-    <title>Astro</title>
-    <script>
-      import { ViewportAnimate } from "viewport-animate";
-
-      window.addEventListener("load", () => {
-        new ViewportAnimate({
-          attribute: "data-va",
-          observerThreshold: 0.01,
-        }).init();
-      });
-    </script>
+    <link rel="stylesheet" href="./styles.css" />
+    <script type="module" src="./index.js"></script>
   </head>
   <body>
     <div class="scroll-container">

@@ -46,6 +46,10 @@
     {
       "packageName": "viewport-animate-example.astro",
       "projectFolder": "packages/viewport-animate-example.astro"
+    },
+    {
+      "packageName": "viewport-animate-example.vue",
+      "projectFolder": "packages/viewport-animate-example.vue"
     }
   ]
 }
