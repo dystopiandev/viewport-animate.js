@@ -19,22 +19,17 @@ export class AnimationProperties {
   playState: AnimationPlayState;
   timeline: string;
 
-  constructor (
+  constructor(
     defaultProps: DefaultAnimationProperties,
     props: Partial<AnimationProperties>
   ) {
     this.name = props.name || "";
-    this.duration =
-      props.duration || defaultProps.duration || "1s";
+    this.duration = props.duration || defaultProps.duration || "1s";
     this.timingFunction =
-      props.timingFunction ||
-      defaultProps.timingFunction ||
-      "ease";
+      props.timingFunction || defaultProps.timingFunction || "ease";
     this.delay = props.delay || defaultProps.delay || "0s";
     this.iterationCount =
-      props.iterationCount ||
-      defaultProps.iterationCount ||
-      1;
+      props.iterationCount || defaultProps.iterationCount || 1;
     this.direction = <AnimationDirection>(
       (props.direction || defaultProps.direction || "normal")
     );
@@ -47,7 +42,7 @@ export class AnimationProperties {
     this.timeline = props.timeline || "";
   }
 
-  public static fromAnimationExpression (
+  public static fromAnimationExpression(
     defaultProps: DefaultAnimationProperties,
     animationExpression: string
   ): AnimationProperties {
@@ -61,43 +56,34 @@ export class AnimationProperties {
       if (parts[i]!.startsWith("+")) {
         props.duration = parts[i]!.substring(1);
         continue;
-      }
-      else if (parts[i]!.startsWith("-")) {
+      } else if (parts[i]!.startsWith("-")) {
         props.delay = parts[i]!.substring(1);
         continue;
-      }
-      else if (parts[i]!.endsWith("x")) {
+      } else if (parts[i]!.endsWith("x")) {
         if (!props.iterationCount) {
           props.iterationCount = parseFloat(parts[i]!.slice(0, -1));
         }
 
         continue;
-      }
-      else {
-        return new AnimationProperties(
-          defaultProps,
-          {
-            name: parts[0],
-            duration: parts[1],
-            timingFunction: parts[2],
-            delay: parts[3],
-            iterationCount: <AnimationIterationCount>parts[4],
-            direction: <AnimationDirection>parts[5],
-            fillMode: <AnimationFillMode>parts[6],
-            playState: <AnimationPlayState>parts[7],
-            timeline: parts[8],
-          }
-        );
+      } else {
+        return new AnimationProperties(defaultProps, {
+          name: parts[0],
+          duration: parts[1],
+          timingFunction: parts[2],
+          delay: parts[3],
+          iterationCount: <AnimationIterationCount>parts[4],
+          direction: <AnimationDirection>parts[5],
+          fillMode: <AnimationFillMode>parts[6],
+          playState: <AnimationPlayState>parts[7],
+          timeline: parts[8],
+        });
       }
     }
 
-    return new AnimationProperties(
-      defaultProps,
-      props
-    );
+    return new AnimationProperties(defaultProps, props);
   }
 
-  public toString (): string {
+  public toString(): string {
     return `${this.name} ${this.duration} ${this.timingFunction} ${this.delay} ${this.iterationCount} ${this.direction} ${this.fillMode} ${this.playState} ${this.timeline}`;
   }
 }

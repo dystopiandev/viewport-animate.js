@@ -2,20 +2,20 @@
  * @jest-environment jsdom
  */
 
-import { describe, expect, it, afterEach, beforeEach, vi } from "vitest";
+import "@testing-library/jest-dom/vitest";
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import {
   AnimationPlayKind,
   AnimationProperties,
   ViewportAnimate,
   type ViewportAnimateOptions,
 } from "../src/index.js";
-import "@testing-library/jest-dom/vitest";
 
 const mockIntersectionObserver = class {
-  constructor () { }
-  observe () { }
-  unobserve () { }
-  disconnect () { }
+  constructor() {}
+  observe() {}
+  unobserve() {}
+  disconnect() {}
 } as unknown as typeof IntersectionObserver;
 
 describe("ViewportAnimate", () => {
@@ -111,8 +111,8 @@ describe("ViewportAnimate", () => {
     it("should parse animation expression correctly", () => {
       [
         {
-          raw: "@0.2,0.5 fadeIn +2.7s -331ms 1.5x", expected:
-          {
+          raw: "@0.2,0.5 fadeIn +2.7s -331ms 1.5x",
+          expected: {
             animationPlayKind: AnimationPlayKind.ONCE,
             animation: {
               name: "fadeIn",
@@ -121,11 +121,11 @@ describe("ViewportAnimate", () => {
               iterationCount: 1.5,
             },
             thresholds: [0.2, 0.5],
-          }
+          },
         },
         {
-          raw: "*0.07 jello", expected:
-          {
+          raw: "*0.07 jello",
+          expected: {
             animationPlayKind: AnimationPlayKind.REPLAY,
             animation: {
               name: "jello",
@@ -134,11 +134,11 @@ describe("ViewportAnimate", () => {
               iterationCount: 1,
             },
             thresholds: [0.07],
-          }
+          },
         },
         {
-          raw: "!0.5 fadeIn +100ms", expected:
-          {
+          raw: "!0.5 fadeIn +100ms",
+          expected: {
             animationPlayKind: AnimationPlayKind.INFINITE,
             animation: {
               name: "fadeIn",
@@ -147,11 +147,11 @@ describe("ViewportAnimate", () => {
               iterationCount: 1,
             },
             thresholds: [0.5],
-          }
+          },
         },
         {
-          raw: "fadeIn 1s ease-in 20ms", expected:
-          {
+          raw: "fadeIn 1s ease-in 20ms",
+          expected: {
             animationPlayKind: AnimationPlayKind.ONCE,
             animation: {
               name: "fadeIn",
@@ -161,12 +161,15 @@ describe("ViewportAnimate", () => {
               timingFunction: "ease-in",
             },
             thresholds: defaultOptions.observerThreshold,
-          }
+          },
         },
       ].forEach(({ raw, expected }) => {
         const result = viewportAnimate["resolveAnimationData"](raw);
 
-        expect(result).toEqual({ ...expected, animation: expect.objectContaining(expected.animation) });
+        expect(result).toEqual({
+          ...expected,
+          animation: expect.objectContaining(expected.animation),
+        });
       });
     });
   });

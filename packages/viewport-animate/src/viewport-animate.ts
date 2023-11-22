@@ -20,7 +20,7 @@ export class ViewportAnimate {
     defaultAnimationProperties: {},
   };
 
-  constructor (options?: Partial<ViewportAnimateOptions>) {
+  constructor(options?: Partial<ViewportAnimateOptions>) {
     Object.assign(this.options, options);
     Object.assign(
       this.options.defaultAnimationProperties,
@@ -28,7 +28,7 @@ export class ViewportAnimate {
     );
   }
 
-  public init () {
+  public init() {
     const elements = document.querySelectorAll<HTMLElement>(
       `[${this.options.attribute}]`
     );
@@ -89,7 +89,10 @@ export class ViewportAnimate {
     }
   }
 
-  private animate (entry: IntersectionObserverEntry, animationData: AnimationData) {
+  private animate(
+    entry: IntersectionObserverEntry,
+    animationData: AnimationData
+  ) {
     const element = entry.target as HTMLElement;
 
     element.style.animation = animationData.animation.toString();
@@ -99,7 +102,7 @@ export class ViewportAnimate {
     }
   }
 
-  private resolveAnimationData (
+  private resolveAnimationData(
     animationExpression: string
   ): AnimationData | null {
     const sanitizedExpression = animationExpression.replace(/\s+/g, " ").trim();
@@ -116,8 +119,8 @@ export class ViewportAnimate {
       : sanitizedExpression;
     const thresholds = animationPlayKind
       ? this.parseObserverThresholds(
-        sanitizedExpression.substring(1).split(" ")[0]!
-      )
+          sanitizedExpression.substring(1).split(" ")[0]!
+        )
       : this.options.observerThreshold;
 
     return {
@@ -130,7 +133,7 @@ export class ViewportAnimate {
     };
   }
 
-  parseObserverThresholds (thresholdExpression: string) {
+  parseObserverThresholds(thresholdExpression: string) {
     const thresholds = thresholdExpression
       .split(",")
       .map((t) => parseFloat(t.trim()))
@@ -139,7 +142,7 @@ export class ViewportAnimate {
     return thresholds.length < 1 ? this.options.observerThreshold : thresholds;
   }
 
-  parseAnimationPlayKind (char?: string): AnimationPlayKind | null {
+  parseAnimationPlayKind(char?: string): AnimationPlayKind | null {
     switch (char) {
       case "@":
         return AnimationPlayKind.ONCE;

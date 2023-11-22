@@ -4,10 +4,10 @@ export * from "./viewport-animate";
 
 declare global {
   interface Window {
-    ViewportAnimate: typeof ViewportAnimate
+    ViewportAnimate: typeof ViewportAnimate;
   }
 }
 
 (() => {
-  if(window) window.ViewportAnimate = ViewportAnimate;
-})()
+  if (typeof window !== "undefined") window.ViewportAnimate = ViewportAnimate;
+})();

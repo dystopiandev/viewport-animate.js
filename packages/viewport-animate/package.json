@@ -12,7 +12,8 @@
   "scripts": {
     "build": "vite build",
     "prepublishOnly": "npm run build",
-    "release": "cp ../../README.md ../../LICENSE ./ && np",
+    "release": "cp ../../README.md ../../LICENSE ./ && np  --no-yarn",
+    "release:preview": "cp ../../README.md ../../LICENSE ./ && np  --no-yarn --preview",
     "test:dev": "vitest",
     "test": "vitest run",
     "coverage": "vitest run --coverage"
