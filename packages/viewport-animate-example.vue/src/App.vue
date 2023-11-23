@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { onMounted } from "vue";
 import { ViewportAnimate } from "viewport-animate";
-import examples from "../../common/examples.ts";
+import examples from "../../common/examples.json";
 import Table from "./components/Table.vue";
 
 onMounted(() => {

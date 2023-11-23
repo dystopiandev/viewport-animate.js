@@ -1,4 +1,4 @@
-{
+window.EXAMPLES = {
   "data-attr": "data-va",
   "defaults": {
     "duration": "1.65s",

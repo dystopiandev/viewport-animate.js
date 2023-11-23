@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import type { Example } from "../../../common/examples.ts";
-import examplesData from "../../../common/examples.ts";
+import type { Example, ExamplesData } from "../../../common/types";
+import examplesData from "../../../common/examples.json";
 import Row from "./Row.vue";
 
-const DEFAULTS = examplesData["defaults"];
-const displayTexts = examplesData["display-texts"];
-const displayTextsKeys = Object.keys(examplesData['display-texts']);
+const DEFAULTS: ExamplesData["defaults"] = examplesData["defaults"];
+const displayTexts: ExamplesData["display-texts"] = examplesData["display-texts"];
+const displayTextsKeys = Object.keys(displayTexts);
 
 defineProps<{
   example: Example;

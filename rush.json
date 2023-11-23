@@ -44,6 +44,10 @@
       "projectFolder": "packages/viewport-animate"
     },
     {
+      "packageName": "viewport-animate-example.html",
+      "projectFolder": "packages/viewport-animate-example.html"
+    },
+    {
       "packageName": "viewport-animate-example.astro",
       "projectFolder": "packages/viewport-animate-example.astro"
     },

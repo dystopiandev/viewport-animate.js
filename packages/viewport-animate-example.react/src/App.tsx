@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { ViewportAnimate } from 'viewport-animate'
-import exampleData from "../../common/examples.ts";
+import exampleData from "../../common/examples.json";
 import Table from "./components/Table.tsx";
 
 function App() {

@@ -1,5 +1,3 @@
-import examples from './examples.json';
-
 export type Example = {
   rule: string;
   name: string;
@@ -27,6 +25,3 @@ export interface ExamplesData {
   } & Record<string, string>,
   examples: Example[]
 }
-
-export default examples as ExamplesData;
-
