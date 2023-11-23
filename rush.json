@@ -50,6 +50,10 @@
     {
       "packageName": "viewport-animate-example.vue",
       "projectFolder": "packages/viewport-animate-example.vue"
+    },
+    {
+      "packageName": "viewport-animate-example.react",
+      "projectFolder": "packages/viewport-animate-example.react"
     }
   ]
 }

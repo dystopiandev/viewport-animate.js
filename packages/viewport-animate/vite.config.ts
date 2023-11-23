@@ -16,6 +16,7 @@ export default defineConfig({
       entry: path.resolve(__dirname, "./src/index.ts"),
       name: PACKAGE_NAME,
       formats: ["es", "umd"],
+      fileName: (format) => `${PACKAGE_NAME}.${format}.js`
     },
   },
 });
