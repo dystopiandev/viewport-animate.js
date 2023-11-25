@@ -1,7 +1,8 @@
 import { useEffect } from "react";
 import { ViewportAnimate } from 'viewport-animate'
-import exampleData from "../../common/examples.json";
 import Table from "./components/Table.tsx";
+
+import examplesData from "shared-examples";
 
 function App() {
   useEffect(() => {
@@ -13,7 +14,7 @@ function App() {
   }, [])
   return (
     <>
-      {exampleData["examples"].map((example, index, examples) => (
+      {examplesData["examples"].map((example, index, examples) => (
         <section key={`example-${index}`} id={`example-${index+1}`}>
           <Table example={example} />
           <div className={'example-target ' + example.shape } data-va={example.rule} ></div>

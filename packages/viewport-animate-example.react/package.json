@@ -12,7 +12,9 @@
   "dependencies": {
     "react": "^18.2.0",
     "animate.css": "~4.1.1",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "shared-examples": "workspace:*",
+    "viewport-animate": "workspace:*"
   },
   "devDependencies": {
     "@types/react": "^18.2.37",
@@ -24,7 +26,6 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.4",
     "typescript": "^5.2.2",
-    "viewport-animate": "workspace:*",
     "vite": "^5.0.0"
   }
 }

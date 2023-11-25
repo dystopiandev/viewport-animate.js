@@ -1,10 +1,11 @@
 <script setup lang="ts">
-import type { Example, ExamplesData } from "../../../common/types";
-import examplesData from "../../../common/examples.json";
+import type { Example, ExamplesData } from "shared-examples";
+import examples from "shared-examples";
 import Row from "./Row.vue";
 
-const DEFAULTS: ExamplesData["defaults"] = examplesData["defaults"];
-const displayTexts: ExamplesData["display-texts"] = examplesData["display-texts"];
+
+const DEFAULTS: ExamplesData["defaults"] = examples["defaults"];
+const displayTexts: ExamplesData["display-texts"] = examples["display-texts"];
 const displayTextsKeys = Object.keys(displayTexts);
 
 defineProps<{
@@ -20,7 +21,7 @@ defineProps<{
         <tr>
           <th colspan="2">
             <p>
-              {{ `${examplesData['data-attr']}="${example.rule}"` }}
+              {{ `${examples['data-attr']}="${example.rule}"` }}
             </p>
           </th>
         </tr>

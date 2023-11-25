@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "vue": "^3.3.8",
+    "shared-examples": "workspace:*",
     "viewport-animate": "workspace:*",
     "animate.css": "~4.1.1"
   },

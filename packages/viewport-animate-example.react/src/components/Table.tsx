@@ -1,7 +1,6 @@
-import type { Example, ExamplesData } from "../../../common/types";
-import examplesData from "../../../common/examples.json";
-
+import type { Example, ExamplesData } from "shared-examples";
 import Row from "./Row.tsx";
+import examplesData from "shared-examples"
 
 type Props = {
   example: Example;
