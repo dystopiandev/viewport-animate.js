@@ -198,6 +198,6 @@ Example:
 ## More Examples
 
 - [Live Astro Demo](https://dystopian.dev/)
-- [Local Astro project](./packages/viewport-animate-example.astro/).
-- [Local Vue project](./packages/viewport-animate-example.vue/).
-- [Local HTML project](./packages/viewport-animate-example.html/).
+- [Local Astro project](./packages/viewport-animate-example.astro/)
+- [Local Vue project](./packages/viewport-animate-example.vue/)
+- [Local HTML project](./packages/viewport-animate-example.html/)
