@@ -14,6 +14,7 @@
     "astro": "^3.4.0",
     "typescript": "^5.2.2",
     "viewport-animate": "workspace:*",
+    "shared-examples": "workspace:*",
     "animate.css": "~4.1.1"
   }
 }
