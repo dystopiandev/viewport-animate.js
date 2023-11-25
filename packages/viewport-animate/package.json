@@ -3,8 +3,8 @@
   "version": "0.1.2",
   "description": "Easy and performant API for applying CSS animations when elements are scrolled into the viewport.",
   "type": "module",
-  "main": "./dist/viewport-animate.umd.cjs",
-  "module": "./dist/viewport-animate.js",
+  "main": "./dist/viewport-animate.umd.js",
+  "module": "./dist/viewport-animate.es.js",
   "types": "./dist/index.d.ts",
   "files": [
     "dist"

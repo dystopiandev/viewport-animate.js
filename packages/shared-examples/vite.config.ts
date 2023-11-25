@@ -1,22 +1,32 @@
 import path from "path";
 import { defineConfig } from "vite";
 import dts from "vite-plugin-dts";
+import { viteStaticCopy } from 'vite-plugin-static-copy'
 
-const PACKAGE_NAME = "viewport-animate";
+const PACKAGE_NAME = "shared-examples";
 
 export default defineConfig({
   plugins: [
     dts({
       rollupTypes: true,
     }),
+    viteStaticCopy({
+      targets: [
+        {
+          src: path.resolve(__dirname, "src") + "/*.css",
+          dest: './',
+        }
+      ]
+    })
   ],
   build: {
     target: ["esnext"],
     lib: {
-      entry: path.resolve(__dirname, "./src/index.ts"),
+      entry: path.resolve(__dirname, "./src/examples.ts"),
       name: PACKAGE_NAME,
       formats: ["es", "umd"],
       fileName: (format) => `${PACKAGE_NAME}.${format}.js`
     },
+    
   },
 });

@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "outDir": "dist",
+    "target": "es2020",
+    "lib": ["es2020", "dom"],
+    "isolatedModules": true,
+    "module": "esnext",
+    "moduleDetection": "force",
+    "allowSyntheticDefaultImports": true,
+    "declaration": true,
+    "pretty": true,
+    "newLine": "lf",
+    "stripInternal": true,
+    "strict": true,
+    "noImplicitReturns": true,
+    "noImplicitOverride": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+    "noEmitOnError": true,
+    "useDefineForClassFields": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true
+  },
+  "include": ["src"],
+  "ts-node": {
+    "transpileOnly": true,
+    "files": true,
+    "experimentalResolver": true
+  }
+}

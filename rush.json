@@ -44,12 +44,20 @@
       "projectFolder": "packages/viewport-animate"
     },
     {
+      "packageName": "shared-examples",
+      "projectFolder": "packages/shared-examples"
+    },
+    {
       "packageName": "viewport-animate-example.astro",
       "projectFolder": "packages/viewport-animate-example.astro"
     },
     {
       "packageName": "viewport-animate-example.vue",
       "projectFolder": "packages/viewport-animate-example.vue"
+    },
+    {
+      "packageName": "viewport-animate-example.react",
+      "projectFolder": "packages/viewport-animate-example.react"
     }
   ]
 }

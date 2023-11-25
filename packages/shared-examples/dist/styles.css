@@ -8,9 +8,10 @@
   --border-color: rgba(255, 255, 255, 0.3);
   --property-color: rgb(190, 32, 221);
   --value-color: rgb(32, 136, 221);
+  --value-color-50: rgba(32, 136, 221, .5);
   --primary-font: 'Spline Sans Mono', monospace;;
   --secondary-font: 'Courier New', Courier, monospace;
-
+  --default-border-radius: 7px;
 }
 
 body {
@@ -41,6 +42,7 @@ section {
   align-items: center;
   justify-items: center;
   scroll-snap-align: center;
+  position: relative;
 }
 
 @media (min-width: 600px) {
@@ -50,12 +52,32 @@ section {
   }
 }
 
+.view-next-example {
+  position: absolute;
+  bottom: 0;
+  padding: 10px 20px;
+  border: 1px solid var(--border-color);
+  border-bottom: none;
+  border-top-right-radius: var(--default-border-radius);
+  border-top-left-radius: var(--default-border-radius);
+  background-color: var(--value-color);
+  filter: brightness(90%);
+  text-transform: capitalize;
+  font-family: var(--primary-font);
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+}
+.view-next-example.last {
+  background-color: var(--background-secondary);
+}
+
 .table-container {
   /* background-color: #fff2; */
   width: fit-content;
   outline: 1px solid var(--border-color);
   overflow: hidden;
-  border-radius: 7px;
+  border-radius: var(--default-border-radius);
 }
 
 table {
@@ -85,7 +107,6 @@ td, th {
 .property {
   color: var(--property-color);
   font-family: var(--primary-font);
-  /* font-weight: 400; */
 }
 .value {
   color: var(--value-color);
@@ -97,7 +118,7 @@ td, th {
   font-weight: 400;
 }
 
-section div:last-child {
+section div.example-target {
   height: 200px;
   width: 200px;
   background-color: var(--value-color);
