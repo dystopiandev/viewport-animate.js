@@ -1,6 +1,6 @@
 {
   "name": "viewport-animate",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Easy and performant API for applying CSS animations when elements are scrolled into the viewport.",
   "type": "module",
   "main": "./dist/viewport-animate.umd.js",
@@ -10,10 +10,10 @@
     "dist"
   ],
   "scripts": {
-    "build": "vite build",
+    "build": "cp ../../README.md ./ && vite build",
     "prepublishOnly": "npm run build",
-    "release": "cp ../../README.md ../../LICENSE ./ && np  --no-yarn",
-    "release:preview": "cp ../../README.md ../../LICENSE ./ && np  --no-yarn --preview",
+    "release": "cp ../../README.md ./ && np  --no-yarn",
+    "release:preview": "cp ../../README.md ./ && np  --no-yarn --preview",
     "test:dev": "vitest",
     "test": "vitest run",
     "coverage": "vitest run --coverage"
