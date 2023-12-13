@@ -14,6 +14,4 @@ pnpm-debug.log*
 # macOS-specific files
 .DS_Store
 
-index.d.ts
-es.js
-umd.js
+dist/

@@ -1,7 +1,7 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/rush/v5/rush.schema.json",
-  "rushVersion": "5.109.2",
-  "pnpmVersion": "8.10.0",
+  "rushVersion": "5.112.2",
+  "pnpmVersion": "8.12.1",
   "nodeSupportedVersionRange": ">=14.15.0 <15.0.0 || >=16.13.0 <17.0.0 || >=18.15.0 <19.0.0 || >=20.3.0 <21.0.0",
   "gitPolicy": {},
   "repository": {
@@ -44,20 +44,24 @@
       "projectFolder": "packages/viewport-animate"
     },
     {
-      "packageName": "shared-examples",
-      "projectFolder": "packages/shared-examples"
+      "packageName": "@sources/viewport-animate",
+      "projectFolder": "sources/viewport-animate"
     },
     {
-      "packageName": "viewport-animate-example.astro",
-      "projectFolder": "packages/viewport-animate-example.astro"
+      "packageName": "@examples/shared",
+      "projectFolder": "examples/shared"
     },
     {
-      "packageName": "viewport-animate-example.vue",
-      "projectFolder": "packages/viewport-animate-example.vue"
+      "packageName": "@examples/demo.astro",
+      "projectFolder": "examples/demo.astro"
     },
     {
-      "packageName": "viewport-animate-example.react",
-      "projectFolder": "packages/viewport-animate-example.react"
+      "packageName": "@examples/demo.vue",
+      "projectFolder": "examples/demo.vue"
+    },
+    {
+      "packageName": "@examples/demo.react",
+      "projectFolder": "examples/demo.react"
     }
   ]
 }

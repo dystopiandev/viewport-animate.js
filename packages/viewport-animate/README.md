@@ -95,7 +95,7 @@ After installation, `ViewportAnimate` can be imported:
 import { ViewportAnimate } from "viewport-animate";
 ```
 
-See the [demo Vue project](./packages/viewport-animate-example.vue/src/App.vue) for a complete example.
+See the [demo Vue project](./examples/demo.vue/src/App.vue) for a complete example.
 
 ### UMD (browser global)
 
@@ -103,15 +103,15 @@ For direct usage in browsers (plain HTML), you can conveniently load the UMD bui
 
 #### Unpkg
 ```html
-<script src="https://unpkg.com/viewport-animate/dist/viewport-animate.umd.js"></script>
+<script src="https://unpkg.com/viewport-animate/umd.js"></script>
 ```
 
 #### JSDelivr
 ```html
-<script src="https://cdn.jsdelivr.net/npm/viewport-animate/dist/viewport-animate.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/viewport-animate/umd.js"></script>
 ```
 
-See the [demo HTML project](./packages/viewport-animate-example.html/index.html) for a complete example.
+See the [demo HTML project](./examples/demo.html/index.html) for a complete example.
 
 ## Example Usage (Plain HTML with Unpkg CDN)
 
@@ -160,7 +160,7 @@ To ensure the elements are visible when JavaScript is disabled, add a separate C
 Next, import the module from a CDN:
 
 ```html
-<script src="https://unpkg.com/viewport-animate/dist/viewport-animate.umd.js"></script>
+<script src="https://unpkg.com/viewport-animate/umd.js"></script>
 ```
 
 ... and then load the module:
@@ -198,7 +198,7 @@ Example:
 ## More Examples
 
 - [Live Astro Demo](https://dystopian.dev/)
-- [Astro project](./packages/viewport-animate-example.astro/)
-- [React project](./packages/viewport-animate-example.html/)
-- [Vue project](./packages/viewport-animate-example.vue/)
-- [HTML project](./packages/viewport-animate-example.html/)
+- [Astro project](./examples/demo.astro/)
+- [React project](./examples/demo.html/)
+- [Vue project](./examples/demo.vue/)
+- [HTML project](./examples/demo.html/)

@@ -1,0 +1,45 @@
+{
+  "name": "@sources/viewport-animate",
+  "version": "0.0.0",
+  "description": "Easy and performant API for applying CSS animations when elements are scrolled into the viewport.",
+  "type": "module",
+  "main": "./dist/viewport-animate.umd.js",
+  "module": "./dist/viewport-animate.es.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "vite build",
+    "prepublishOnly": "npm run build",
+    "test:dev": "vitest",
+    "test": "vitest run",
+    "coverage": "vitest run --coverage"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.1.4",
+    "@vitest/coverage-v8": "^0.34.6",
+    "jsdom": "^22.1.0",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.2",
+    "vite-plugin-dts": "^3.6.3",
+    "vitest": "^0.34.6"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=14.17"
+  },
+  "author": {
+    "name": "dystopiandev",
+    "email": "me@dystopian.dev",
+    "url": "https://dystopian.dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dystopiandev/viewport-animate.js"
+  },
+  "license": "ISC",
+  "keywords": []
+}

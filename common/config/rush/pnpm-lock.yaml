@@ -8,71 +8,32 @@ importers:
 
   .: {}
 
-  ../../packages/shared-examples:
-    devDependencies:
-      typescript:
-        specifier: ^5.2.2
-        version: 5.3.2
-      vite:
-        specifier: ^5.0.2
-        version: 5.0.2(@types/node@20.9.3)
-      vite-plugin-dts:
-        specifier: ^3.6.3
-        version: 3.6.3(typescript@5.3.2)(vite@5.0.2)
-      vite-plugin-static-copy:
-        specifier: 1.0.0
-        version: 1.0.0(vite@5.0.2)
-
-  ../../packages/viewport-animate:
-    devDependencies:
-      '@testing-library/jest-dom':
-        specifier: ^6.1.4
-        version: 6.1.4(vitest@0.34.6)
-      '@vitest/coverage-v8':
-        specifier: ^0.34.6
-        version: 0.34.6(vitest@0.34.6)
-      jsdom:
-        specifier: ^22.1.0
-        version: 22.1.0
-      np:
-        specifier: '*'
-        version: 8.0.4(typescript@5.3.2)
-      typescript:
-        specifier: ^5.2.2
-        version: 5.3.2
-      vite:
-        specifier: ^5.0.2
-        version: 5.0.2(@types/node@20.9.3)
-      vite-plugin-dts:
-        specifier: ^3.6.3
-        version: 3.6.3(typescript@5.3.2)(vite@5.0.2)
-      vitest:
-        specifier: ^0.34.6
-        version: 0.34.6(jsdom@22.1.0)
-
-  ../../packages/viewport-animate-example.astro:
+  ../../examples/demo.astro:
     dependencies:
       '@astrojs/check':
         specifier: ^0.2.1
         version: 0.2.1(typescript@5.3.2)
+      '@examples/shared':
+        specifier: workspace:*
+        version: link:../shared
       animate.css:
         specifier: ~4.1.1
         version: 4.1.1
       astro:
         specifier: ^3.4.0
         version: 3.5.7(typescript@5.3.2)
-      shared-examples:
-        specifier: workspace:*
-        version: link:../shared-examples
       typescript:
         specifier: ^5.2.2
         version: 5.3.2
       viewport-animate:
         specifier: workspace:*
-        version: link:../viewport-animate
+        version: link:../../packages/viewport-animate
 
-  ../../packages/viewport-animate-example.react:
+  ../../examples/demo.react:
     dependencies:
+      '@examples/shared':
+        specifier: workspace:*
+        version: link:../shared
       animate.css:
         specifier: ~4.1.1
         version: 4.1.1
@@ -82,12 +43,9 @@ importers:
       react-dom:
         specifier: ^18.2.0
         version: 18.2.0(react@18.2.0)
-      shared-examples:
-        specifier: workspace:*
-        version: link:../shared-examples
       viewport-animate:
         specifier: workspace:*
-        version: link:../viewport-animate
+        version: link:../../packages/viewport-animate
     devDependencies:
       '@types/react':
         specifier: ^18.2.37
@@ -120,17 +78,17 @@ importers:
         specifier: ^5.0.0
         version: 5.0.2(@types/node@20.9.3)
 
-  ../../packages/viewport-animate-example.vue:
+  ../../examples/demo.vue:
     dependencies:
+      '@examples/shared':
+        specifier: workspace:*
+        version: link:../shared
       animate.css:
         specifier: ~4.1.1
         version: 4.1.1
-      shared-examples:
-        specifier: workspace:*
-        version: link:../shared-examples
       viewport-animate:
         specifier: workspace:*
-        version: link:../viewport-animate
+        version: link:../../packages/viewport-animate
       vue:
         specifier: ^3.3.8
         version: 3.3.8(typescript@5.3.2)
@@ -147,6 +105,54 @@ importers:
       vue-tsc:
         specifier: ^1.8.22
         version: 1.8.22(typescript@5.3.2)
+
+  ../../examples/shared:
+    devDependencies:
+      typescript:
+        specifier: ^5.2.2
+        version: 5.3.2
+      vite:
+        specifier: ^5.0.2
+        version: 5.0.2(@types/node@20.9.3)
+      vite-plugin-dts:
+        specifier: ^3.6.3
+        version: 3.6.3(typescript@5.3.2)(vite@5.0.2)
+      vite-plugin-static-copy:
+        specifier: 1.0.0
+        version: 1.0.0(vite@5.0.2)
+
+  ../../packages/viewport-animate:
+    devDependencies:
+      '@sources/viewport-animate':
+        specifier: workspace:*
+        version: link:../../sources/viewport-animate
+      np:
+        specifier: '*'
+        version: 8.0.4
+
+  ../../sources/viewport-animate:
+    devDependencies:
+      '@testing-library/jest-dom':
+        specifier: ^6.1.4
+        version: 6.1.4(vitest@0.34.6)
+      '@vitest/coverage-v8':
+        specifier: ^0.34.6
+        version: 0.34.6(vitest@0.34.6)
+      jsdom:
+        specifier: ^22.1.0
+        version: 22.1.0
+      typescript:
+        specifier: ^5.2.2
+        version: 5.3.2
+      vite:
+        specifier: ^5.0.2
+        version: 5.0.2(@types/node@20.9.3)
+      vite-plugin-dts:
+        specifier: ^3.6.3
+        version: 3.6.3(typescript@5.3.2)(vite@5.0.2)
+      vitest:
+        specifier: ^0.34.6
+        version: 0.34.6(jsdom@22.1.0)
 
 packages:
 
@@ -1851,6 +1857,7 @@ packages:
 
   /abab@2.0.6:
     resolution: {integrity: sha512-j2afSsaIENvHZN2B8GOpF566vZ5WVk5opAiMTvWgaQT8DkbOqsTfvNAvHoRGU2zzP8cPoqys+xHTRDWW8L+/BA==}
+    deprecated: Use your platform's native atob() and btoa() methods instead
     dev: true
 
   /acorn-jsx@5.3.2(acorn@8.11.2):
@@ -2197,6 +2204,7 @@ packages:
 
   /buffer@5.7.1:
     resolution: {integrity: sha512-EHcyIPBQ4BSGlvjB16k5KgAJ27CIsHY/2JBmCRReo48y9rQ3MaUzWX3KVlBa4U7MyX02HdVj0K7C3WaB3ju7FQ==}
+    requiresBuild: true
     dependencies:
       base64-js: 1.5.1
       ieee754: 1.2.1
@@ -2584,7 +2592,7 @@ packages:
     engines: {node: '>= 0.6'}
     dev: false
 
-  /cosmiconfig@8.3.6(typescript@5.3.2):
+  /cosmiconfig@8.3.6:
     resolution: {integrity: sha512-kcZ6+W5QzcJ3P1Mt+83OUv/oHFqZHIx8DuxG6eZ5RGMERoLqp4BuGjhHLYGK+Kf5XVkQvqBSmAy/nGWN3qDgEA==}
     engines: {node: '>=14'}
     peerDependencies:
@@ -2597,7 +2605,6 @@ packages:
       js-yaml: 4.1.0
       parse-json: 5.2.0
       path-type: 4.0.0
-      typescript: 5.3.2
     dev: true
 
   /cross-spawn@7.0.3:
@@ -2695,6 +2702,7 @@ packages:
   /deep-extend@0.6.0:
     resolution: {integrity: sha512-LOHxIOaPYdHlJRtCQfDIVZtfw/ufM8+rVj649RIHzcm/vGwQRXFt6OPqIFWsm2XEMrNIEtWR64sY1LEKD2vAOA==}
     engines: {node: '>=4.0.0'}
+    requiresBuild: true
 
   /deep-is@0.1.4:
     resolution: {integrity: sha512-oIPzksmTg4/MriiaYGO+okXDT7ztn/w3Eptv/+gSIdMdKsJo0u4CfYNFJPy+4SKMuCqGw2wxnA+URMg3t8a/bQ==}
@@ -2822,6 +2830,7 @@ packages:
   /domexception@4.0.0:
     resolution: {integrity: sha512-A2is4PLG+eeSfoTMA95/s4pvAoSo2mKtiM5jlHkAVewmiO8ISFTFKZjH7UAM1Atli/OT/7JHOrJRJiMKUZKYBw==}
     engines: {node: '>=12'}
+    deprecated: Use your platform's native DOMException instead
     dependencies:
       webidl-conversions: 7.0.0
     dev: true
@@ -5078,6 +5087,7 @@ packages:
   /mimic-response@3.1.0:
     resolution: {integrity: sha512-z0yWI+4FDrrweS8Zmt4Ej5HdJmky15+L2e6Wgn3+iK5fWzb6T3fhNFq2+MeTRb064c6Wr4N/wv0DzQTjNzHNGQ==}
     engines: {node: '>=10'}
+    requiresBuild: true
 
   /mimic-response@4.0.0:
     resolution: {integrity: sha512-e5ISH9xMYU0DzrT+jl8q2ze9D6eWBto+I8CNpe+VI+K2J/F/k3PdkdTdz4wvGVH4NTpo+NRYTVIuMQEMMcsLqg==}
@@ -5104,6 +5114,7 @@ packages:
 
   /minimist@1.2.8:
     resolution: {integrity: sha512-2yyAR8qBkN3YuheJanUpWC5U3bb5osDywNB8RzDVlDwDHbocAJveqqj1u8+SVD7jkWT4yvsHCpWqqWqAxb0zCA==}
+    requiresBuild: true
 
   /mkdirp-classic@0.5.3:
     resolution: {integrity: sha512-gKLcREMhtuZRwRAfqP3RFW+TK4JqApVBtOIftVgjuABpAtpxhPGaDcfvbhNvD0B8iD1oUr/txX35NjcaY6Ns/A==}
@@ -5232,13 +5243,13 @@ packages:
     engines: {node: '>=14.16'}
     dev: true
 
-  /np@8.0.4(typescript@5.3.2):
+  /np@8.0.4:
     resolution: {integrity: sha512-a4s1yESHcIwsrk/oaTekfbhb1R/2z2yyfVLX6Atl54w/9+QR01qeYyK3vMWgJ0UY+kYsGzQXausgvUX0pkmIMg==}
     engines: {git: '>=2.11.0', node: '>=16.6.0', npm: '>=7.19.0', yarn: '>=1.7.0'}
     hasBin: true
     dependencies:
       chalk: 5.3.0
-      cosmiconfig: 8.3.6(typescript@5.3.2)
+      cosmiconfig: 8.3.6
       del: 7.1.0
       escape-goat: 4.0.0
       escape-string-regexp: 5.0.0
@@ -6511,6 +6522,7 @@ packages:
   /strip-json-comments@2.0.1:
     resolution: {integrity: sha512-4gB8na07fecVVkOI6Rs4e7T6NOTki5EmL7TUduTs6bu3EdnSycntVJ4re8kgZA+wx9IueI2Y11bfbgwtzuE0KQ==}
     engines: {node: '>=0.10.0'}
+    requiresBuild: true
 
   /strip-json-comments@3.1.1:
     resolution: {integrity: sha512-6fPc+R4ihwqP6N/aIv2f1gMH8lOVtWQHoqC4yK6oSDVVocumAsfCqjkXnqiYMhmMwS/mEHLp7Vehlt3ql6lEig==}

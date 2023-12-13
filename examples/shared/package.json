@@ -1,0 +1,20 @@
+{
+  "name": "@examples/shared",
+  "version": "0.0.0",
+  "type": "module",
+  "main": "./dist/umd.js",
+  "module": "./dist/es.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "vite build"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2",
+    "vite": "^5.0.2",
+    "vite-plugin-dts": "^3.6.3",
+    "vite-plugin-static-copy": "1.0.0"
+  }
+}
