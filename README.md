@@ -28,7 +28,7 @@
 - Non-intrusive: Uses data attribute (`data-va`) by default.
 - Easily integrate with [Animate.css](https://animate.style/).
 - Simple syntax for specifying duration, delay and number of iterations for each animation. Standard [CSS animation syntax](https://developer.mozilla.org/en-US/docs/Web/CSS/animation) can be used to specify more animation properties.
-- Only play animations when elements are scrolled into the viewport, with a observer thresholds.
+- Only play animations when elements are scrolled into the viewport, with observer thresholds.
 - If desired, replay animations when elements are scrolled out of the viewport and back in.
 
 ## Syntax
