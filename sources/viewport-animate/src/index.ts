@@ -7,7 +7,3 @@ declare global {
     ViewportAnimate: typeof ViewportAnimate;
   }
 }
-
-(() => {
-  if (typeof window !== "undefined") window.ViewportAnimate = ViewportAnimate;
-})();

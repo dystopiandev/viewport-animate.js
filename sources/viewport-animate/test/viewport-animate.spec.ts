@@ -2,7 +2,6 @@
  * @jest-environment jsdom
  */
 
-import "@testing-library/jest-dom/vitest";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import {
   AnimationPlayKind,
@@ -12,10 +11,10 @@ import {
 } from "../src/index.js";
 
 const mockIntersectionObserver = class {
-  constructor() {}
-  observe() {}
-  unobserve() {}
-  disconnect() {}
+  constructor() { }
+  observe() { }
+  unobserve() { }
+  disconnect() { }
 } as unknown as typeof IntersectionObserver;
 
 describe("ViewportAnimate", () => {

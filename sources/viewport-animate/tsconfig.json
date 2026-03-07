@@ -5,8 +5,6 @@
     "lib": ["es2020", "dom"],
     "isolatedModules": true,
     "module": "esnext",
-    "moduleDetection": "force",
-    "allowSyntheticDefaultImports": true,
     "resolveJsonModule": false,
     "jsx": "react",
     "declaration": true,
@@ -19,6 +17,7 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
+    "verbatimModuleSyntax": true,
     "noUncheckedIndexedAccess": true,
     "noEmitOnError": true,
     "useDefineForClassFields": true,
@@ -26,9 +25,4 @@
     "skipLibCheck": true
   },
   "include": ["src"],
-  "ts-node": {
-    "transpileOnly": true,
-    "files": true,
-    "experimentalResolver": true
-  }
 }

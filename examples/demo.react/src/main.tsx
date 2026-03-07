@@ -1,7 +1,7 @@
 import "animate.css/animate.css";
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "@examples/shared/dist/styles.css";
+import "@examples/shared/styles.css";
 import App from "./App.tsx";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(

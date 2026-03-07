@@ -96,8 +96,4 @@ const Examples: ExamplesData = {
   ],
 };
 
-(() => {
-  if (typeof window !== "undefined") window.EXAMPLES = Examples;
-})();
-
 export default Examples;

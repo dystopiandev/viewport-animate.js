@@ -2,19 +2,25 @@
   "name": "@examples/shared",
   "version": "0.0.0",
   "type": "module",
-  "main": "./dist/umd.js",
-  "module": "./dist/es.js",
-  "types": "./dist/index.d.ts",
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "vite build"
+    "build": "tsdown && pnpm run build:css",
+    "build:css": "tailwindcss -i src/styles.css -o dist/styles.css"
   },
   "devDependencies": {
-    "typescript": "^5.2.2",
-    "vite": "^5.0.2",
-    "vite-plugin-dts": "^3.6.3",
-    "vite-plugin-static-copy": "1.0.0"
+    "@tailwindcss/cli": "^4.2.1",
+    "tailwindcss": "^4.2.1",
+    "tsdown": "catalog:",
+    "typescript": "catalog:"
+  },
+  "exports": {
+    ".": "./dist/index.mjs",
+    "./styles.css": "./dist/styles.css",
+    "./package.json": "./package.json"
   }
 }

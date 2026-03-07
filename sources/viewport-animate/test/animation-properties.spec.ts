@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 import {
   AnimationProperties,
   DefaultAnimationProperties,
-} from "../src/index.js";
+} from "../src/index";
 
 const defaultProps: DefaultAnimationProperties = new AnimationProperties(
   {},

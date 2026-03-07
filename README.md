@@ -103,12 +103,12 @@ For direct usage in browsers (plain HTML), you can conveniently load the UMD bui
 
 #### Unpkg
 ```html
-<script src="https://unpkg.com/viewport-animate/umd.js"></script>
+<script src="https://unpkg.com/viewport-animate/dist/index.umd.js"></script>
 ```
 
 #### JSDelivr
 ```html
-<script src="https://cdn.jsdelivr.net/npm/viewport-animate/umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/viewport-animate/dist/index.umd.js"></script>
 ```
 
 See the [demo HTML project](./examples/demo.html/index.html) for a complete example.
@@ -160,7 +160,7 @@ To ensure the elements are visible when JavaScript is disabled, add a separate C
 Next, import the module from a CDN:
 
 ```html
-<script src="https://unpkg.com/viewport-animate/umd.js"></script>
+<script src="https://unpkg.com/viewport-animate/dist/index.umd.js"></script>
 ```
 
 ... and then load the module:

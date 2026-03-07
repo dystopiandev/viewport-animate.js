@@ -1,133 +1,80 @@
-[data-va] {
-  opacity: 0;
+@import url('https://fonts.googleapis.com/css2?family=Geom:ital,wght@0,300..900;1,300..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import "tailwindcss";
+@theme {
+  --color-primary-bg: #423E3B;
+  --color-secondary-bg: #0A2342;
+  
+  --color-primary-text: #E1E5EE;
+  --color-secondary-text: #FFFECB;
+
+  --font-sans: "Geom", sans-serif;
+  --font-mono: "Space Mono", monospace;
 }
 
 :root {
-  --background: rgb(12, 0, 14);
-  --background-secondary: rgba(129, 129, 129, 0.1);
-  --border-color: rgba(255, 255, 255, 0.3);
-  --property-color: rgb(190, 32, 221);
-  --value-color: rgb(32, 136, 221);
-  --value-color-50: rgba(32, 136, 221, .5);
-  --primary-font: 'Spline Sans Mono', monospace;;
-  --secondary-font: 'Courier New', Courier, monospace;
-  --default-border-radius: 7px;
+  --base-roundness: 10px;
 }
 
-body {
-  max-width: 100dvw;
-  height: 100dvh;
-  overflow: hidden;
-  place-items: center;
-  font-family: var(--primary-font);
-  background: linear-gradient(to bottom, var(--background), rgb(1, 14, 2));
+body, html {
+  @apply h-screen w-screen;
+  @apply bg-primary-bg;
 }
 
 .scroll-container {
   scroll-behavior: smooth;
-  height: 100dvh;
   overflow-y: scroll;
-  scroll-snap-type: y proximity;
-  display: grid;
+
+  @apply grid snap-y snap-proximity max-h-screen;
 }
 
 section {
-  height: 100dvh;
-  width: 98%;
-  max-width: 870px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  color: #fff;
-  align-items: center;
-  justify-items: center;
-  scroll-snap-align: center;
-  position: relative;
-}
-
-@media (min-width: 600px) {
-  section {
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr 1fr;
-  }
+  @apply h-screen scroll-smooth snap-center grid grid-cols-1 md:grid-cols-2;
+  @apply mx-auto max-w-4xl gap-12 my-auto items-center relative;
 }
 
 .view-next-example {
-  position: absolute;
-  bottom: 0;
-  padding: 10px 20px;
-  border: 1px solid var(--border-color);
-  border-bottom: none;
-  border-top-right-radius: var(--default-border-radius);
-  border-top-left-radius: var(--default-border-radius);
-  background-color: var(--value-color);
-  filter: brightness(90%);
-  text-transform: capitalize;
-  font-family: var(--primary-font);
-  font-weight: 700;
-  color: #fff;
-  text-decoration: none;
-}
-.view-next-example.last {
-  background-color: var(--background-secondary);
+  @apply absolute rounded-xl px-4 py-2.5 bg-orange-400;
+  @apply font-semibold text-white text-lg font-sans;
+  @apply top-[80%] left-1/2 -translate-x-1/2 opacity-0;
+  @apply border border-white/5 shadow shadow-white/5;
 }
 
 .table-container {
-  /* background-color: #fff2; */
-  width: fit-content;
-  outline: 1px solid var(--border-color);
-  overflow: hidden;
-  border-radius: var(--default-border-radius);
-}
-
-table {
-  border-collapse: collapse;
+  @apply w-fit border rounded-(--base-roundness);
+  @apply bg-white/5 border-white/5 shadow;
+  @apply shadow-white/15;
 }
 
 tr:first-child > th {
-  padding: 10px;
-  border-bottom: 1px solid var(--border-color);
-  background-color: var(--background-secondary);
-  font-weight: bold;
-}
-th > p {
-  text-align: center;
-  font-family: var(--secondary-font);
-}
-
-td {
-  border-left: 1px solid var(--border-color);
+  @apply border-b font-bold text-white;
+  @apply border-white/10 font-sans;
 }
 
 td, th {
-  padding: 10px 25px;
-  text-align: left;
+  @apply py-3 px-5 text-left;
 }
 
 .property {
-  color: var(--property-color);
-  font-family: var(--primary-font);
-}
-.value {
-  color: var(--value-color);
-  font-family: var(--secondary-font);
-  font-weight: 700;
-}
-.value > span {
-  font-family: var(--primary-font);
-  font-weight: 400;
+  @apply text-primary-text font-semibold font-sans;
+  @apply border-r border-white/5;
 }
 
-section div.example-target {
-  height: 200px;
-  width: 200px;
-  background-color: var(--value-color);
-  box-shadow: 0 0 0.25rem rgba(255, 255, 255, .2);
+.value {
+  @apply text-secondary-text font-bold font-mono;
+}
+
+.value > span {
+  @apply font-normal text-orange-400 font-sans ml-1;
+}
+
+.example-target {
+  @apply size-[200px] bg-orange-400 shadow-lg mx-auto;
 }
 
 .square {
-  border-radius: 5px;
+  @apply rounded-lg;
 }
+
 .circle {
-  border-radius: 50%;
+  @apply rounded-full;
 }
